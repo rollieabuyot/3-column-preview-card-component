@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    /* Primary Colors */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* (paragraphs) */
+    --transparent-white : hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --very-light-gray : hsl(0, 0%, 95%);
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+    color: var(--very-dark-cyan);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background: var(--very-light-gray);
+    color: var(--transparent-white);
+    font-size: 15px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    padding: 40px;
+}
+
+.card .title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--very-light-gray);
+    margin: 30px auto;
+}
+
+.card .description {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-bottom: 100px;
+}
+
+.card a {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    background-color: var(--very-light-gray);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.card a:hover {
+    border: 2px solid var(--very-light-gray);
+    background-color: transparent;
+    color: var(--very-light-gray);
+}
+
+.card-sedan {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-sedan a {
+    color: var(--bright-orange);
+}
+
+.card-suv {
+    background-color: var(--dark-cyan);
+}
+
+.card-suv a {
+    color: var(--dark-cyan);
+}
+
+.card-luxury {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card-luxury a{
+    color: var(--very-dark-cyan);
+}
+
+@media only screen and (max-width:375px){
+    
+    .container {
+        height:min-content;
+        margin: 50px auto;
+    }
+    .cards-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-sedan {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .card-luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+}
